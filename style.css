@@ -33,3 +33,7 @@ tr:nth-child(even) {
 tr:hover {
   background: #eef6ff;
 }
+th,
+td {
+  text-align: center;
+}
