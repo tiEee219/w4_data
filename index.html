@@ -6,8 +6,7 @@
   <title>Song Tempo and Danceability</title>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="sketch.js" defer></script>
-  <script src="chartscript.js" defer></script>
+  <script src="sketch.js?v=3" defer></script>
   <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
@@ -16,6 +15,23 @@
     Comparing average danceability across six song tempo ranges.
     Danceability is measured on a scale from 0 to 1.
   </p>
+  <div class="controls">
+  <label for="sortOrder">
+    Sort by:
+    <select id="sortOrder">
+      <option value="tempo">Tempo range (original order)</option>
+      <option value="dance_desc">Danceability: High to Low</option>
+      <option value="dance_asc">Danceability: Low to High</option>
+      <option value="count_desc">Song Count: High to Low</option>
+    </select>
+  </label>
+  <label for="tempoFilter">
+    Filter by tempo:
+    <select id="tempoFilter">
+      <option value="all">All tempo ranges</option>
+    </select>
+  </label>
+</div>
   <h2>Average Danceability by Tempo Range</h2>
   <canvas id="danceabilityChart"></canvas>
   <table id="dataTable">
