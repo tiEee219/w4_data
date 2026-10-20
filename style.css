@@ -33,7 +33,10 @@ tr:nth-child(even) {
 tr:hover {
   background: #eef6ff;
 }
-th,
-td {
+#dataTable th,
+#dataTable td {
   text-align: center;
+}
+#dataTable {
+  margin-top: 40px;
 }
