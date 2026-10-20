@@ -20,15 +20,15 @@
     Sort by:
     <select id="sortOrder">
       <option value="tempo">Tempo range (original order)</option>
-      <option value="dance_desc">Danceability: High to Low</option>
-      <option value="dance_asc">Danceability: Low to High</option>
-      <option value="count_desc">Song Count: High to Low</option>
+      <option value="dance_desc">Highest danceability first</option>
     </select>
   </label>
   <label for="tempoFilter">
-    Filter by tempo:
+    Filter by average danceability:
     <select id="tempoFilter">
-      <option value="all">All tempo ranges</option>
+      <option value="all">All groups</option>
+      <option value="higher">Average danceability ≥ 0.6</option>
+      <option value="lower">Average danceability &lt; 0.6</option>
     </select>
   </label>
 </div>
