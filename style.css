@@ -40,3 +40,16 @@ tr:hover {
 #dataTable {
   margin-top: 40px;
 }
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.controls select {
+  margin-left: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
