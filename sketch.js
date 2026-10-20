@@ -8,21 +8,10 @@ Papa.parse('spotify_summary.csv', {
   download: true,
   header: true,
   skipEmptyLines: true,
-
   complete: function(results) {
-    allData = results.data;
-    allData.forEach(row => {
-      const option = document.createElement('option');
-
-      option.value = row.tempo_group;
-      option.textContent = row.tempo_group;
-
-      tempoFilter.appendChild(option);
-    });
-
-    updateDisplay();
-  },
-
+  allData = results.data;
+  updateDisplay();
+},
   error: function(err) {
     console.error("FAILED");
     console.error(err);
@@ -33,22 +22,22 @@ sortOrder.addEventListener('change', updateDisplay);
 
 function updateDisplay() {
   let rows = allData.filter(row => {
-    return tempoFilter.value === 'all' ||
-      row.tempo_group === tempoFilter.value;
-  });
+  const score = Number(row.avg_danceability);
+
+  if (tempoFilter.value === 'higher') {
+    return score >= 0.6;
+  }
+
+  if (tempoFilter.value === 'lower') {
+    return score < 0.6;
+  }
+
+  return true;
+ });
+  
   if (sortOrder.value === 'dance_desc') {
     rows.sort((a, b) =>
       Number(b.avg_danceability) - Number(a.avg_danceability)
-    );
-
-  } else if (sortOrder.value === 'dance_asc') {
-    rows.sort((a, b) =>
-      Number(a.avg_danceability) - Number(b.avg_danceability)
-    );
-
-  } else if (sortOrder.value === 'count_desc') {
-    rows.sort((a, b) =>
-      Number(b.song_count) - Number(a.song_count)
     );
   }
   const tbody = document.querySelector('#dataTable tbody');
