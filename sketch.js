@@ -76,7 +76,7 @@ function updateDisplay() {
           datasets: [{
             label: 'Average Danceability',
             data: values,
-            backgroundColor: '#4e79a7'
+            backgroundColor: '#9b4a4a'
           }]
         },
 
