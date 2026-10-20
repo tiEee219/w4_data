@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Song Tempo and Danceability</title>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="sketch.js" defer></script>
+  <script src="chartscript.js" defer></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -28,6 +30,8 @@
     <tbody>
     </tbody>
   </table>
+  <h2>Average Danceability by Tempo Range</h2>
+  <canvas id="danceabilityChart"></canvas>
   <p>Data from <a href='https://www.kaggle.com/datasets/geomack/spotifyclassification'>Spotify Song Attributes on Kaggle</a></p>
 </body>
 </html>
