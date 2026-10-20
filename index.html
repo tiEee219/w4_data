@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Song Tempo and Danceability</title>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="sketch.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Song Tempo and Danceability</h1>
+  <p>
+    Comparing average danceability across six song tempo ranges.
+    Danceability is measured on a scale from 0 to 1.
+  </p>
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Tempo Range (BPM)</th>
+        <th>Song Count</th>
+        <th>Average Tempo (BPM)</th>
+        <th>Average Danceability</th>
+        <th>Minimum Danceability</th>
+        <th>Maximum Danceability</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <p>Data from <a href='https://www.kaggle.com/datasets/geomack/spotifyclassification'>Spotify Song Attributes on Kaggle</a></p>
+</body>
+</html>
